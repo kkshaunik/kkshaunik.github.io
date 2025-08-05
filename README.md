@@ -1,11 +1,22 @@
 # NovaStack Labs Website
 
-This repository hosts the static website for **NovaStack Labs**, a tech training institute offering courses in Python, AI, Cloud and DevOps. The site is built with HTML, Tailwind CSS and JavaScript and is automatically deployed to GitHub Pages using GitHub Actions whenever changes are pushed to the `main` branch.
+This repository hosts the website for **NovaStack Labs**. It is built with Node.js/Express and uses a SQLite database to store course registration requests. An admin interface allows viewing submitted data after logging in.
 
 ## Development
 
-Edit `index.html` and `script.js` to update content or behaviour.
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the server:
+   ```bash
+   npm start
+   ```
+3. Set environment variables for admin access:
+   - `ADMIN_USERNAME`
+   - `ADMIN_PASSWORD`
+   - Optional: `SESSION_SECRET`
 
 ## Deployment
 
-The workflow in `.github/workflows/deploy.yml` builds and deploys the site to GitHub Pages on every push to `main`.
+A GitHub Actions workflow (`.github/workflows/deploy.yml`) runs tests and triggers a Render deployment using the `RENDER_DEPLOY_HOOK` secret on pushes to `main`.
