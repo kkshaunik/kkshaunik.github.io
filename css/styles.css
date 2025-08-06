@@ -1,0 +1,15 @@
+body {
+  scroll-behavior: smooth;
+}
+
+main {
+  min-height: 70vh;
+}
+
+.card-title {
+  font-weight: 600;
+}
+
+footer {
+  margin-top: 2rem;
+}
